@@ -4,4 +4,4 @@ console.log("Hey " + name.name);
 console.log("What's up " + name.name);
 
 const lastName = "milkis";
-console.log('lastName');
+console.log(lastname+ ' Is the last name');
