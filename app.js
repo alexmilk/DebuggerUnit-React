@@ -1,7 +1,9 @@
-require('./style.scss');
-var name = require ('./functions');
-console.log("Hey " + name.name);
-console.log("What's up " + name.name);
+import Layout from "./components/Layout";
+import React from "react";
+import ReactDOM from "react-dom";
 
-const lastName = "milkis";
-console.log(lastname+ ' Is the last name');
+require('./style.scss');
+
+const app = document.getElementById('app');
+
+ReactDOM.render(<Layout/>, app);
