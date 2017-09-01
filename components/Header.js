@@ -1,9 +1,12 @@
 import React from "react";
+;
 
 export default class Header extends React.Component {
     render() {
+        console.log(this.props.title);
         return (
-            <header>That's my header!</header>
+            <div>
+            </div>
         );
     }
 }
