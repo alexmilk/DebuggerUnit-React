@@ -9,8 +9,6 @@ export default class Layout extends React.Component {
     const title = "Welcome a board!";
         return (
             <div>
-            <Header title={title}/>
-            <Footer />
             </div>
         );
     }
