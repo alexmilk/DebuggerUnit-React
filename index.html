@@ -4,56 +4,37 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>mwDebugger React</title>
-        <link href="https://bootswatch.com/cosmo/bootstrap.css" type="text/css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <link href="style.scss" type="text/css" rel="stylesheet" />
     </head>
     <body>
-    <div class="nav">
-        <div style="float: left">
-            <a class="dropbtn">Home</a>
-            <div class="dropdown">
-                <button class="dropbtn">Player Functions</button>
-                <div class="dropdown-content">
-                    <a onclick="buildPath();cleanPreviousErrors();">Reload player</a>
-                    <a href="#" id="getActiveSource" onclick="getActiveSource()">Download active flavor</a>
-                    <a onclick="getActiveBitrate()">Get Current Bitrate (Chrome/Firefox Only)</a>
-                    <a onclick="getYouboraAnalytics()">Track Youbora Analytics</a>
-                    <a onclick="getGoogleAnalytics()">Track Google Analytics</a>
+	<div id="app"></div>
+    <br>
+    <div id="embed">
+        <div>
+            <nav className="navbar navbar-inverse">
+                <div className="container-fluid">
+                    <div className="navbar-header">
+                        <a className="navbar-brand" href="#">WebSiteName</a>
+                    </div>
+                    <ul className="nav navbar-nav">
+                        <li className="active"><a href="#">Home</a></li>
+                        <li><a href="#">Page 1</a></li>
+                        <li><a href="#">Page 2</a></li>
+                    </ul>
+                    <form className="navbar-form navbar-left">
+                        <div className="form-group">
+                            <input type="text" className="form-control" placeholder="Search" />
+                        </div>
+                        <button type="submit" className="btn btn-default">Submit</button>
+                    </form>
                 </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Video Debugging Tools</button>
-                <div class="dropdown-content">
-                    <a href="#">Get video aspect ratio</a>
-                    <a href="https://shaka-player-demo.appspot.com/demo/" target="_blank">Standalone Dash Shaka player</a>
-                    <a href="https://video-dev.github.io/hls.js/demo/" target="_blank">Standalone HLS.JS player</a>
-                    <a href="http://players.akamai.com/hds/" target="_blank">Standalone Akamai HDS player</a>
-                    <a href="http://players.akamai.com/hls/" target="_blank">Standalone Akamai HLS player</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Ad Debugging Tools</button>
-                <div class="dropdown-content">
-                    <a href="#" id="testOnVast" onclick="goToVast()">Test on Google VAST inspector</a>
-                    <a href="https://i.loopme.me/html/vpaid/test-page.html" target="_blank">VPAID ad tester</a>
-                    <a href="http://tagvalidator.videohub.tv/?adtag=&playerType=jwPlayer&playerSize=640x360&adtagType=&adChoicesOverlay=off" target="_blank">VideoHub ad tester</a>
-                    <a href="https://video-dev.github.io/hls.js/demo/" target="_blank">Standalone HLS.JS player</a>
-                    <a href="http://www.zedo.com/vastvalidator/" target="_blank">Zedo ad tester</a>
-                    <a href="https://www.spotx.tv/tag-generator/" target="_blank">SPOTX Tag Generator</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Commands</button>
-                <div class="dropdown-content">
-                    <a href="#" id="cleanMedia()">Unload video asset</a>
-                    <a href="#" id="removeThumb">Remove Thumbnail</a>
-                    <a href="#" id="removePlay">Remove play button</a>
-                    <a href="#" id="hideControls">Hide controls bar</a>
-                </div>
-            </div>
+            </nav>
         </div>
     </div>
-	<div id="app"></div>
     <script src="build.js"></script>
     </body>
 </html>

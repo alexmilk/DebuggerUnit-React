@@ -9767,7 +9767,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 __webpack_require__(187);
 
 var app = document.getElementById('app');
-
 _reactDom2.default.render(_react2.default.createElement(_Layout2.default, null), app);
 
 /***/ }),
@@ -9815,8 +9814,14 @@ var Layout = function (_React$Component) {
     _createClass(Layout, [{
         key: "render",
         value: function render() {
-            var title = "Welcome a board!";
-            return _react2.default.createElement("div", null);
+            var name = "Alex";
+            var style = 'float: left;';
+            getActiveSource = function getActiveSource() {
+                var playerSource = document.kPlayer_ifp_ifp.kPlayer_ifp;
+                var currentSource = playerSource.getSource();
+                window.open(currentSource.src, '_blank');
+            };
+            return _react2.default.createElement("div", { className: "navbarTop" }, _react2.default.createElement("div", { style: { float: 'left' } }, _react2.default.createElement("a", { className: "dropbtn" }, "Home"), _react2.default.createElement("div", { className: "dropdown" }, _react2.default.createElement("button", { className: "dropbtn" }, "Player Functions"), _react2.default.createElement("div", { className: "dropdown-content" }, _react2.default.createElement("a", { onclick: "buildPath();cleanPreviousErrors();" }, "Reload player"), _react2.default.createElement("a", { href: "#", id: "getActiveSource", onClick: "{getActiveSource}" }, "Download active flavor"), _react2.default.createElement("a", { onclick: "getActiveBitrate()" }, "Get Current Bitrate (Chrome/Firefox Only)"), _react2.default.createElement("a", { onclick: "getYouboraAnalytics()" }, "Track Youbora Analytics"), _react2.default.createElement("a", { onclick: "getGoogleAnalytics()" }, "Track Google Analytics"))), _react2.default.createElement("div", { className: "dropdown" }, _react2.default.createElement("button", { className: "dropbtn" }, "Video Debugging Tools"), _react2.default.createElement("div", { className: "dropdown-content" }, _react2.default.createElement("a", { href: "#" }, "Get video aspect ratio"), _react2.default.createElement("a", { href: "https://shaka-player-demo.appspot.com/demo/", target: "_blank" }, "Standalone Dash Shaka player"), _react2.default.createElement("a", { href: "https://video-dev.github.io/hls.js/demo/", target: "_blank" }, "Standalone HLS.JS player"), _react2.default.createElement("a", { href: "http://players.akamai.com/hds/", target: "_blank" }, "Standalone Akamai HDS player"), _react2.default.createElement("a", { href: "http://players.akamai.com/hls/", target: "_blank" }, "Standalone Akamai HLS player"))), _react2.default.createElement("div", { className: "dropdown" }, _react2.default.createElement("button", { className: "dropbtn" }, "Ad Debugging Tools"), _react2.default.createElement("div", { className: "dropdown-content" }, _react2.default.createElement("a", { href: "#", id: "testOnVast", onclick: "goToVast()" }, "Test on Google VAST inspector"), _react2.default.createElement("a", { href: "https://i.loopme.me/html/vpaid/test-page.html", target: "_blank" }, "VPAID ad tester"), _react2.default.createElement("a", { href: "http://tagvalidator.videohub.tv/?adtag=&playerType=jwPlayer&playerSize=640x360&adtagType=&adChoicesOverlay=off", target: "_blank" }, "VideoHub ad tester"), _react2.default.createElement("a", { href: "https://video-dev.github.io/hls.js/demo/", target: "_blank" }, "Standalone HLS.JS player"), _react2.default.createElement("a", { href: "http://www.zedo.com/vastvalidator/", target: "_blank" }, "Zedo ad tester"), _react2.default.createElement("a", { href: "https://www.spotx.tv/tag-generator/", target: "_blank" }, "SPOTX Tag Generator"))), _react2.default.createElement("div", { className: "dropdown" }, _react2.default.createElement("button", { className: "dropbtn" }, "Commands"), _react2.default.createElement("div", { className: "dropdown-content" }, _react2.default.createElement("a", { href: "#", id: "cleanMedia()" }, "Unload video asset"), _react2.default.createElement("a", { href: "#", id: "removeThumb" }, "Remove Thumbnail"), _react2.default.createElement("a", { href: "#", id: "removePlay" }, "Remove play button"), _react2.default.createElement("a", { href: "#", id: "hideControls" }, "Hide controls bar")))));
         }
     }]);
 
