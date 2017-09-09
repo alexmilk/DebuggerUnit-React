@@ -3,17 +3,6 @@ import ReactDOM from "react-dom";
 
 export default class TopNavbar extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {checked: true};
-    }
-    handleChecked(){
-        if(this.state.checked){
-            this.setState({checked: !this.state.checked})
-        } else {
-            this.setState({checked: true})
-        }
-    }
     render() {
         return (
             <div>
@@ -23,11 +12,11 @@ export default class TopNavbar extends React.Component {
                         <div className="dropdown">
                             <button className="dropbtn">Player Functions</button>
                             <div className="dropdown-content">
-                                <a onclick="buildPath();cleanPreviousErrors();">Reload player</a>
-                                <a href="#" id="getActiveSource" onclick="getActiveSource()">Download active flavor</a>
-                                <a onclick="getActiveBitrate()">Get Current Bitrate (Chrome/Firefox Only)</a>
-                                <a onclick="getYouboraAnalytics()">Track Youbora Analytics</a>
-                                <a onclick="getGoogleAnalytics()">Track Google Analytics</a>
+                                <a onClick="buildPath();cleanPreviousErrors();">Reload player</a>
+                                <a href="#" id="getActiveSource" onClick="getActiveSource()">Download active flavor</a>
+                                <a onClick="getActiveBitrate()">Get Current Bitrate (Chrome/Firefox Only)</a>
+                                <a onClick="getYouboraAnalytics()">Track Youbora Analytics</a>
+                                <a onClick="getGoogleAnalytics()">Track Google Analytics</a>
                             </div>
                         </div>
                         <div className="dropdown">
@@ -43,7 +32,7 @@ export default class TopNavbar extends React.Component {
                         <div className="dropdown">
                             <button className="dropbtn">Ad Debugging Tools</button>
                             <div className="dropdown-content">
-                                <a href="#" id="testOnVast" onclick="goToVast()">Test on Google VAST inspector</a>
+                                <a href="#" id="testOnVast" onClick="goToVast()">Test on Google VAST inspector</a>
                                 <a href="https://i.loopme.me/html/vpaid/test-page.html" target="_blank">VPAID ad tester</a>
                                 <a href="http://tagvalidator.videohub.tv/?adtag=&playerType=jwPlayer&playerSize=640x360&adtagType=&adChoicesOverlay=off" target="_blank">VideoHub ad tester</a>
                                 <a href="https://video-dev.github.io/hls.js/demo/" target="_blank">Standalone HLS.JS player</a>
@@ -64,15 +53,15 @@ export default class TopNavbar extends React.Component {
                     <div style="float: right; height: 25px; width: 600px; padding-right: 20px; padding-top: 2px">
                         <form className="form-inline pull-right">
                             <div className="form-group">
-                                <input type="search" className="form-control input-sm" style="height: 19px !important;" id="searchInput" placeholder="Search VPaaS">
+                                <input type="search" className="form-control input-sm" style="height: 19px !important;" id="searchInput" placeholder="Search VPaaS"/>
                             </div>
-                            <button type="submit" className="btn btn-default btn-xs" style="height: 19px !important; margin-top: 2px" onclick="vpaasSearch()">Search</button>
+                            <button type="submit" className="btn btn-default btn-xs" style="height: 19px !important; margin-top: 2px" onClick="vpaasSearch()">Search</button>
                         </form>
                     </div>
                 </nav>
-            </div>
-        );
-    }
-}
+            </div> 
+    );
+        }
+        }
 
 ReactDOM.render(<TopNavbar />, document.getElementById('topNavBar'));
