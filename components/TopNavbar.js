@@ -2,11 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 
-menuItems = [
-    { url: "htt", name: },
-    {}
-]
-
 export default class TopNavbar extends React.Component {
 
     render() {
